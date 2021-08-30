@@ -1,18 +1,18 @@
-from functools import cache, lru_cache
-from pandas import DataFrame
+houses = ['Erics house', 'Kenny House', 'Kyle house', 'stans house']
 
-@lru_cache(maxsize=5)
-def fib(n: int):
-    if n <= 1:
-        return n
-    return fib(n - 1) + fib(n - 2)
+# Each function call represents an elf doing his work.
+def deliver_presents_recursively(houses):
+    if len(houses) == 1:
+        house = houses[0]
+        print(f"Delivering presents to, {house}")
 
-
-def main():
-    for i in range(400):
-        print(i, fib(i))
-    print('done')
+    else:
+        mid = len(houses) // 2
+        first_half = houses[:mid]
+        second_half = houses[mid:]
 
 
-if __name__ == '__main__':
-    main()
+        deliver_presents_recursively(first_half)
+        deliver_presents_recursively(second_half)
+
+deliver_presents_recursively(houses)

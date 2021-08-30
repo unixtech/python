@@ -12,7 +12,7 @@ y = range(1, 10000)
 #measure timing function
 def measure(func):
     @wraps(func)
-    def _time_it(*args, **kwargs):
+    def _time_it(*args, **kwargs, **vwro):
         start = int(round(time()*1000))
         try:
             return func(*args, **kwargs)
