@@ -17,6 +17,14 @@ def primes_less_than(n: int) -> list[int]:
 
 
 
+def primes_less_than1(n: int) -> list[int]:
+    if n <= 2:
+        return []
+
+    is_prime = [True] * n
+    is_prime[0] = False
+    is_prime[1] = False
+
 
 if __name__ == '__main__':
-    print(primes_less_than(100))
+    print(primes_less_than(50))
