@@ -17,13 +17,13 @@ import json
 # print(f"K is {K} for {x}")
 
 x = random.randint(1, 100)
-N = int(x)
+N = int(3)
 print(N)
-
+results = {}
 
 def col_con(NUM: int) -> int:
     K = 0
-    while(True):
+    while(NUM < K):
         K = K + 1
         if (NUM == 1):
             break

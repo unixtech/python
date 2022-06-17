@@ -1,0 +1,25 @@
+<html>
+  <head>
+<link rel="stylesheet" href="path/to/pyscript.css" />
+<script defer src="path/to/pyscript.js"></script>
+  <py-env>
+     -numpy
+     - matplotlib
+     <!--- paths:-->
+      <!--- /data.py-->
+  </py-env>
+  </head>
+
+  <body>
+    <h1> Let's plot random numbers </h1>
+    <div id="plot"></div>
+    <py-script output="plot">
+      import matplotlib.pyplot as plt
+
+      x, y = make_x_and_y(n=100)
+    </py-script>
+
+  </body>
+</html>
+
+
