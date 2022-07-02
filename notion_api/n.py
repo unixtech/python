@@ -1,13 +1,13 @@
 import os
 import requests, json
 
-
-TOKEN = 'secret_FoaNQ7ylvKWmHvU02UIUdEGmXYezBglXzTOS7TNgxQO'
+with open('/root/sec/api_key_AutoInt') as sec:
+    TOKEN = sec.readline()
 
 DATABASEUID = '9a7fe539db2f499795ead0686f0eda42'
 
 HEADERS = {
-    'Authorization' : 'Bearer' +TOKEN,
+    'Authorization' : 'Bearer' + TOKEN,
 }
 
 def readDataabse(DATABASEUID, HEADERS):
