@@ -1,9 +1,4 @@
 '''
-
-
 with open(FILENAME):
     DOSOMETHING
-
 '''
-
-
